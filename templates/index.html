@@ -1,0 +1,25 @@
+{%extends "base.html"%}
+{% block content %}
+	<p>
+	{% for art in Article %}
+		<h2>{{art.title}}</h2>
+		<h4>{{art.author}} - {{art.date}}</h4>
+		<p>{{art.content_html|safe|truncatechars_html:256}}</p>
+		<span class="pull-right">
+			<a href="/post/{{art.title}}/" class="btn btn-default" role="button">Lire la suite <span class="glyphicon glyphicon-chevron-right"></span></a>
+		</span>
+	{%endfor%}
+	</p>
+	<br/>
+		<hr/>
+		<nav>
+			<ul class="pager">
+			{% if Article.has_next %}
+				<li class="previous"><a href="?page={{ Article.next_page_number }}"><span aria-hidden="true">&larr;</span> Older</a></li>
+			{% endif %}
+			{% if Article.has_previous %}
+				<li class="next"><a href="?page={{ Article.previous_page_number }}">Newer <span aria-hidden="true">&rarr;</span></a></li>
+			{% endif %}
+			</ul>
+		</nav>
+{% endblock %}

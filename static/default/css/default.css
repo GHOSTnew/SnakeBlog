@@ -1,0 +1,66 @@
+/*
+ * ===============================
+ * Global
+ * ===============================
+ */
+@import url(http://fonts.googleapis.com/css?family=Andika);
+
+html {
+	position: relative;
+	min-height: 100%;
+	font-family: 'Andika', sans-serif;
+}
+
+body {
+	background-color: #75755a;
+	/* Margin bottom by footer height */
+	margin-bottom: 70px;
+}
+
+a {
+	color: #316241;
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	color: #ffc656;
+}
+
+a.btn-default {
+	color: #316241;
+}
+/*
+ * ===============================
+ * Navbar
+ * ===============================
+ */
+.navbar-base {
+	background-color: #fff;
+	font-family: 'Andika', sans-serif;
+}
+
+/*
+ * ===============================
+ * Content
+ * ===============================
+ */
+.page {
+	margin-top: 60px;
+	padding-top: 10px;
+	background-color: #fff;
+	padding-bottom: 10px;
+}
+/*
+ * ===============================
+ * Footer
+ * ===============================
+ */
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	height: 60px;
+	background-color: #fff;
+}
